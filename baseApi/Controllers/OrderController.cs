@@ -7,11 +7,15 @@ using System.Web.Http;
 using baseApi.Models;
 using System.Data;
 using System.Data.OleDb;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace baseApi.Controllers
 {
     public class OrderController : ApiController
     {
+        // install jwt
+        // Install-Package System.IdentityModel.Tokens.Jwt -Version 5.1.4
+
         ItemsModel[] items = new ItemsModel[]
             {
                 new ItemsModel(1001, "Burrito", "Vegan", 2.56, "https://upload.wikimedia.org/wikipedia/commons/a/ad/Hippie_Kitchen%2C_Jefferson_Highway%2C_Old_Jefferson_Louisiana_Burrito_Unwrapped.jpg"),
